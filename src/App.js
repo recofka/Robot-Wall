@@ -1,13 +1,17 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import store from './store';
 import './App.css';
-import CardComponent from './Card/CardComponent';
+import Card from './components/Card/Card';
 
 const App = () => (
-  <div className="App">
-    <main>
-      <CardComponent />
-    </main>
-  </div>
+  <Provider store={store}>
+    <div className="App">
+      <main>
+        <Card />
+      </main>
+    </div>
+  </Provider>
 );
 
 export default App;
