@@ -5,14 +5,19 @@ import { fetchRobots } from '../../actions/action';
 
 class Card extends Component {
   componentDidMount() {
-    this.props.fetchRobots()
+    this.props.fetchRobots();
   }
 
   render() {
     return (
-      <CardComponent />
+      <CardComponent robotsData={this.props.robots} />
     );
   }
 }
 
-export default connect(null, { fetchRobots })(Card);
+const mapStateToProps = state => (
+  {
+    robots: state.robots,
+  });
+
+export default connect(mapStateToProps, { fetchRobots })(Card);
