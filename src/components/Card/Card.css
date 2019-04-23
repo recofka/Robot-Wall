@@ -1,0 +1,18 @@
+.card{
+    display:inline-block;
+    background: #5cc2d0;
+    border-radius:.5rem;
+    padding: .2rem;
+    margin: .5rem;
+    cursor:pointer;
+    border-width:.25rem;
+    box-shadow:4px 4px 8px 0px rgba( 0, 0, 0, 0.4 )
+}
+
+.card:hover {
+    transform:scale(1.05)
+}
+
+.robot-info{
+   font-family: 'Courier New', Courier, monospace;
+}
