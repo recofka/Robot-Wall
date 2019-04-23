@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "eslint-config-standard-jsx": "^6.0.2",
-    "eslint-plugin-react-app": "^4.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.2",
@@ -31,10 +29,12 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "eslint": "^5.16.0",
+    "eslint": "5.12.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.12.4"
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-config-standard-jsx": "^6.0.2",
+    "eslint-plugin-react-app": "^4.0.1"
   }
 }
