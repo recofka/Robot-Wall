@@ -15,7 +15,7 @@ export const fetchRobots = () => (dispatch) => {
 };
 
 
-// Set
+// Dispatch onchange searchField
 export const ROBOTS_FILTERED = 'ROBOTS_FILTERED';
 
 const filteredRobot = robotFiltered => ({
