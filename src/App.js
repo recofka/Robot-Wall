@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchRobots, robotSearch } from './actions/action';
@@ -11,23 +13,25 @@ class App extends Component {
     this.props.fetchRobots();
   }
 
-  onSearchChange = event => {
-    const e = event.target.value
-    console.log(this.props);
-    this.props.robotSearch(e)
+  onSearchChange = (event) => {
+    this.props.robotSearch(event.target.value);
   }
 
   render() {
+    const { robots, filteredRobots } = this.props;
+    const showFilteredRobots = robots.filter(
+      robot => robot.name.toLowerCase().includes(filteredRobots.toLowerCase()),
+    );
     return (
-        <div className="App">
-          <header>
-            <h1>Robots</h1>
-          </header>
-          <main>
-            <SearchBox searchChange={this.onSearchChange} />
-            <Card robot={this.props.robots} />
-          </main>
-        </div>
+      <div className="App">
+        <header>
+          <h1>Robots</h1>
+        </header>
+        <main>
+          <SearchBox searchChange={this.onSearchChange} />
+          <Card robot={showFilteredRobots} />
+        </main>
+      </div>
     );
   }
 }
@@ -35,6 +39,7 @@ class App extends Component {
 const mapStateToProps = state => (
   {
     robots: state.robots,
+    filteredRobots: state.filteredRobots.searchField,
   });
 
 export default connect(mapStateToProps, { fetchRobots, robotSearch })(App);
