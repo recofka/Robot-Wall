@@ -13,3 +13,15 @@ export const fetchRobots = () => (dispatch) => {
     })
     .catch(console.error);
 };
+
+
+// Set
+export const ROBOTS_FILTERED = 'ROBOTS_FILTERED';
+
+const filteredRobot = robotFiltered => ({
+  type: ROBOTS_FILTERED, robotFiltered,
+});
+
+export const robotSearch = robotFiltered => (dispatch) => {
+  dispatch(filteredRobot(robotFiltered));
+};

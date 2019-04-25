@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchRobots } from './actions/action';
+import { fetchRobots, robotSearch } from './actions/action';
 import Card from './components/Card/Card';
 import SearchBox from './components/SearchBox/SearchBox';
 import './App.css';
@@ -12,8 +12,9 @@ class App extends Component {
   }
 
   onSearchChange = event => {
-    this.setState({searchField: event.target.value})
-    console.log(this.state);
+    const e = event.target.value
+    console.log(this.props);
+    this.props.robotSearch(e)
   }
 
   render() {
@@ -36,4 +37,4 @@ const mapStateToProps = state => (
     robots: state.robots,
   });
 
-export default connect(mapStateToProps, { fetchRobots })(App);
+export default connect(mapStateToProps, { fetchRobots, robotSearch })(App);
