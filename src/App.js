@@ -1,17 +1,45 @@
-import React from 'react';
-import { Provider } from 'react-redux';
-import store from './store';
-import './App.css';
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchRobots, robotSearch } from './actions/action';
 import Card from './components/Card/Card';
+import SearchBox from './components/SearchBox/SearchBox';
+import './App.css';
 
-const App = () => (
-  <Provider store={store}>
-    <div className="App">
-      <main>
-        <Card />
-      </main>
-    </div>
-  </Provider>
-);
 
-export default App;
+class App extends Component {
+  componentDidMount() {
+    this.props.fetchRobots();
+  }
+
+  onSearchChange = (event) => {
+    this.props.robotSearch(event.target.value);
+  }
+
+  render() {
+    const { robots, filteredRobots } = this.props;
+    const showFilteredRobots = robots.filter(
+      robot => robot.name.toLowerCase().includes(filteredRobots.toLowerCase()),
+    );
+    return (
+      <div className="App">
+        <header>
+          <h1>Robots</h1>
+        </header>
+        <main>
+          <SearchBox searchChange={this.onSearchChange} />
+          <Card robot={showFilteredRobots} />
+        </main>
+      </div>
+    );
+  }
+}
+
+const mapStateToProps = state => (
+  {
+    robots: state.robots,
+    filteredRobots: state.filteredRobots.searchField,
+  });
+
+export default connect(mapStateToProps, { fetchRobots, robotSearch })(App);
