@@ -1,38 +1,39 @@
 import React, { Component } from 'react';
-import { Provider } from 'react-redux';
-import store from './store';
-import './App.css';
+import { connect } from 'react-redux';
+import { fetchRobots } from './actions/action';
 import Card from './components/Card/Card';
 import SearchBox from './components/SearchBox/SearchBox';
+import './App.css';
 
 
-export default class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      searchField: '',
-    };
+class App extends Component {
+  componentDidMount() {
+    this.props.fetchRobots();
   }
 
- 
   onSearchChange = event => {
     this.setState({searchField: event.target.value})
-    console.log('statee',this.state);
+    console.log(this.state);
   }
 
   render() {
     return (
-      <Provider store={store}>
         <div className="App">
           <header>
             <h1>Robots</h1>
           </header>
           <main>
             <SearchBox searchChange={this.onSearchChange} />
-            <Card />
+            <Card robot={this.props.robots} />
           </main>
         </div>
-      </Provider>
     );
   }
 }
+
+const mapStateToProps = state => (
+  {
+    robots: state.robots,
+  });
+
+export default connect(mapStateToProps, { fetchRobots })(App);
