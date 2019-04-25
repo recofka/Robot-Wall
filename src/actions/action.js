@@ -11,5 +11,19 @@ export const fetchRobots = () => (dispatch) => {
     .then((response) => {
       dispatch(robotsFetched(response.body));
     })
+    // eslint-disable-next-line no-console
     .catch(console.error);
+};
+
+
+// Dispatch onchange searchField
+export const ROBOTS_FILTERED = 'ROBOTS_FILTERED';
+
+const filteredRobot = robotFiltered => ({
+  type: ROBOTS_FILTERED,
+  payload: robotFiltered,
+});
+
+export const robotSearch = robotFiltered => (dispatch) => {
+  dispatch(filteredRobot(robotFiltered));
 };

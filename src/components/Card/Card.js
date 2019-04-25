@@ -1,23 +1,19 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+/* eslint-disable react/prop-types */
+import React from 'react';
 import CardComponent from './CardComponent';
-import { fetchRobots } from '../../actions/action';
 
-class Card extends Component {
-  componentDidMount() {
-    this.props.fetchRobots();
-  }
 
-  render() {
-    return (
-      <CardComponent robotsData={this.props.robots} />
-    );
-  }
-}
-
-const mapStateToProps = state => (
-  {
-    robots: state.robots,
-  });
-
-export default connect(mapStateToProps, { fetchRobots })(Card);
+const Card = ({ robot }) => (
+  <div>
+    {robot.map((user, i) => (
+      <CardComponent
+        key={robot[i].id}
+        id={robot[i].id}
+        name={robot[i].name}
+        email={robot[i].email}
+      />
+    ))
+    }
+  </div>
+);
+export default Card;
