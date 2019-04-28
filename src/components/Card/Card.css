@@ -16,3 +16,8 @@
 .robot-info{
    font-family: 'Courier New', Courier, monospace;
 }
+
+.link {
+    text-decoration: none; 
+    color: #305f72
+}
