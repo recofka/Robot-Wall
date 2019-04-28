@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { fetchRobots, robotSearch } from './actions/action';
 import Card from './components/Card/Card';
 import SearchBox from './components/SearchBox/SearchBox';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import './App.css';
 
 
@@ -23,14 +24,17 @@ class App extends Component {
       robot => robot.name.toLowerCase().includes(filteredRobots.toLowerCase()),
     );
     return (
+
       <div className="App">
         <header>
           <h1>Robots</h1>
         </header>
-        <main>
-          <SearchBox searchChange={this.onSearchChange} />
-          <Card robot={showFilteredRobots} />
-        </main>
+        <SearchBox searchChange={this.onSearchChange} />
+        <BrowserRouter>
+          <Switch>
+            <Route path='/' exact component={() => <Card robot={showFilteredRobots} />} />
+          </Switch>
+        </BrowserRouter>
       </div>
     );
   }
