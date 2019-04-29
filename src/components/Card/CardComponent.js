@@ -5,7 +5,7 @@ import './Card.css';
 
 const CardComponent = ({ id, name, email }) => (
   <div className="card">
-    <Link to={`/robot/${id}`} className="link">
+    <Link to={`/${id}`} className="link" key={id}>
       <img src={`https://robohash.org/${id}?100x100`} alt="RobotAvatar" />
       <div className="robot-info">
         <h2>{name}</h2>

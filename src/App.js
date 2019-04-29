@@ -2,12 +2,12 @@
 /* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import { fetchRobots, robotSearch } from './actions/action';
 import Card from './components/Card/Card';
 import SearchBox from './components/SearchBox/SearchBox';
-import { Route, BrowserRouter, Switch } from 'react-router-dom';
+import DetailRobot from './components/DetailRobot/Detail';
 import './App.css';
-
 
 class App extends Component {
   componentDidMount() {
@@ -32,7 +32,8 @@ class App extends Component {
         <SearchBox searchChange={this.onSearchChange} />
         <BrowserRouter>
           <Switch>
-            <Route path='/' exact component={() => <Card robot={showFilteredRobots} />} />
+            <Route path="/" exact component={() => <Card robot={showFilteredRobots} />} />
+            <Route path="/:id" component={DetailRobot} />
           </Switch>
         </BrowserRouter>
       </div>
