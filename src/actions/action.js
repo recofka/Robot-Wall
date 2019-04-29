@@ -27,3 +27,20 @@ const filteredRobot = robotFiltered => ({
 export const robotSearch = robotFiltered => (dispatch) => {
   dispatch(filteredRobot(robotFiltered));
 };
+
+
+// Fetch single Robot
+export const SINGLE_ROBOT_FETCHED = 'SINGLE_ROBOT_FETCHED';
+
+const robotSingleFetched = SingleRobot => ({
+  type: SINGLE_ROBOT_FETCHED, SingleRobot,
+});
+
+export const fetchSingleRobot = id => (dispatch) => {
+  request(`https://jsonplaceholder.typicode.com/users/${id}`)
+    .then((response) => {
+      dispatch(robotSingleFetched(response.body));
+    })
+    // eslint-disable-next-line no-console
+    .catch(console.error);
+};

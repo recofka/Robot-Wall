@@ -1,23 +1,20 @@
-.card{
+.card-info{
     display:inline-block;
-    background: #ecfd38a3;
+    background: #87f1d1;
     border-radius:.5rem;
-    padding: .2rem;
+    padding: .8rem;
     margin: .5rem;
+    line-height: .5rem;
     cursor:pointer;
     border-width:.25rem;
     box-shadow:4px 4px 8px 0px rgba( 0, 0, 0, 0.4 )
 }
 
-.card:hover {
+.card-info:hover {
     transform:scale(1.05)
 }
 
-.robot-info{
-   font-family: 'Courier New', Courier, monospace;
+.card-detail p, h2, h3{
+    color:#1b3a46;
 }
 
-.link {
-    text-decoration: none; 
-    color: #305f72
-}
