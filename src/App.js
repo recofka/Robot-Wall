@@ -4,10 +4,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import { fetchRobots, robotSearch } from './actions/action';
+import Nav from './components/Nav/Nav';
 import Card from './components/Card/Card';
 import SearchBox from './components/SearchBox/SearchBox';
 import DetailRobot from './components/DetailRobot/Detail';
 import './App.css';
+import Footer from './components/Footer/Footer';
 
 
 class App extends Component {
@@ -27,9 +29,7 @@ class App extends Component {
     return (
 
       <div className="App">
-        <header>
-          <h1>Robots</h1>
-        </header>
+        <Nav />
         <SearchBox searchChange={this.onSearchChange} />
         <BrowserRouter>
           <Switch>
@@ -37,6 +37,7 @@ class App extends Component {
             <Route path="/:id" component={DetailRobot} />
           </Switch>
         </BrowserRouter>
+        <Footer />
       </div>
     );
   }

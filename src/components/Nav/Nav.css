@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Optimus Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Optimus Regular'), url('./Optimus.woff') format('woff');
+    }
+
+.title a {
+    margin: 0;
+    font-family: 'Optimus Regular';
+    font-size: 3.5em;
+    color: #305f72;
+    text-decoration: none;
+  }
+  
