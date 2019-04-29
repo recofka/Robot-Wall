@@ -2,7 +2,6 @@
 import React from 'react';
 import CardComponent from './CardComponent';
 
-
 const Card = ({ robot }) => (
   <div>
     {robot.map((user, i) => (
