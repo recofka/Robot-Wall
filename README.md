@@ -4,7 +4,7 @@
 
 
 #  Robot-Wall :robot:
-## [ There's not much to see yet :construction: But check out what I've done so far](https://robot-wall.netlify.com/)
+## [:construction: Check out what I've done so far](https://robot-wall.netlify.com/)
 
 
  For more info why I am doing this checkout: **[Goals for this project](#goals-for-this-project)**
@@ -22,6 +22,7 @@
 #### 👀👇 Click links to view some samples in this project 👇👀
 
 - **[React](https://github.com/recofka/Robot-Wall/blob/master/src/App.js)**
+- **[Router](https://github.com/recofka/Robot-Wall/blob/master/src/App.js)**
 - **[Redux](https://github.com/recofka/Robot-Wall/blob/master/src/store.js)**
 - **[Eslint](https://github.com/recofka/Robot-Wall/blob/master/.eslintrc.js)**
 
@@ -29,9 +30,11 @@
 
 ## Goals for this project:
 
-- To practice for myself.
+- To practice react lifecycle methods.
+- Learn how to write a good code using eslint.
 - Show me some of what I can do using React and Redux.
-- **[To showcase disciplined git usage](#my-git-workflow)**
+- Use continuous delivery practices.
+- **[To showcase disciplined git usage.](#my-git-workflow)**
 
 ## Features built so far overview with pull requests
 
@@ -39,6 +42,10 @@
 
 - **[Feat/CardCompoment](https://github.com/recofka/Robot-Wall/pull/2)**
 - **[Feat/FetchData](https://github.com/recofka/Robot-Wall/pull/3)**
+- **[Feat/Searchbox](https://github.com/recofka/Robot-Wall/pull/11)**
+- **[Feat/DetailRobot](https://github.com/recofka/Robot-Wall/pull/15)**
+
+
 
 ## My git workflow
 
