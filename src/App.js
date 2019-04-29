@@ -9,6 +9,7 @@ import SearchBox from './components/SearchBox/SearchBox';
 import DetailRobot from './components/DetailRobot/Detail';
 import './App.css';
 
+
 class App extends Component {
   componentDidMount() {
     this.props.fetchRobots();
