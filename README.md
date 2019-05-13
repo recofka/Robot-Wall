@@ -1,4 +1,4 @@
-## In progress :rocket::rocket:
+# In progress :rocket::rocket:
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/da28a142-ec26-4270-801a-bd703ae14485/deploy-status)](https://app.netlify.com/sites/robot-wall/deploys)
 
