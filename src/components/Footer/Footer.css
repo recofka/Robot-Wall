@@ -1,19 +1,20 @@
 @font-face {
-    font-family: 'Optimus Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Optimus Regular'), url('../../components/Nav/Optimus.woff') format('woff');
+  font-family: "Optimus Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Optimus Regular"),
+    url("../../components/Nav/Optimus.woff") format("woff");
 }
 
 .footer a {
-    margin: 0;
-    font-family: 'Optimus Regular';
-    font-size: 0.8em;
-    color: #305f72;
-    text-decoration: none;
-  }
+  margin: 0;
+  font-family: "Optimus Regular";
+  font-size: 0.8em;
+  color: #305f72;
+  text-decoration: none;
+}
 
 .footer {
-    padding-top: 3.5em;
-    padding-bottom: 1.5em;
+  padding-top: 3.5em;
+  padding-bottom: 1.5em;
 }

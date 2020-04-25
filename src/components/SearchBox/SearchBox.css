@@ -1,11 +1,11 @@
 .SearchBox {
-    padding: 2em;
+  padding: 2em;
 }
 
 .SearchInput {
-    padding: 1.3em;
-    border-style:solid;
-    border-width:1px;
-    border-color: #19a974;
-    background-color: #d2eae2;
+  padding: 1.3em;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #19a974;
+  background-color: #d2eae2;
 }

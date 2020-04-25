@@ -28,7 +28,7 @@ class DetailRobot extends Component {
       catchPhrase, bs,
     } = this.props.SingleRobot.company;
 
-    return ( console.log(this.props),
+    return (
       <div>
         <div className="card">
           <img src={`https://robohash.org/${id}?80x80`} alt="RobotAvatar" />
