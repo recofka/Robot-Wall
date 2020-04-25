@@ -1,5 +1,5 @@
 .App {
   text-align: center;
-  background-color:#efcddf;
+  background-color: #efcddf;
+  min-height: 100vh;
 }
-
