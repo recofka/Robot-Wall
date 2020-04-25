@@ -1,23 +1,23 @@
-.card{
-    display:inline-block;
-    background: #ecfd38a3;
-    border-radius:.5rem;
-    padding: .2rem;
-    margin: .5rem;
-    cursor:pointer;
-    border-width:.25rem;
-    box-shadow:4px 4px 8px 0px rgba( 0, 0, 0, 0.4 )
+.card {
+  display: inline-block;
+  background: #ecfd38a3;
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  border-width: 0.25rem;
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.4);
 }
 
 .card:hover {
-    transform:scale(1.05)
+  transform: scale(1.05);
 }
 
-.robot-info{
-   font-family: 'Courier New', Courier, monospace;
+.robot-info {
+  font-family: "Courier New", Courier, monospace;
 }
 
 .link {
-    text-decoration: none; 
-    color: #305f72
+  text-decoration: none;
+  color: #305f72;
 }
